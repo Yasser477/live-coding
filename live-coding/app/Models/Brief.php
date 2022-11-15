@@ -14,5 +14,11 @@ class Brief extends Model
         return $this->hasMany(Task::class,'brief_id','id');
     }
 
+    public function apprentice(){
+        return $this->hasMany(apprentice::class);
+
+    }
+
+
     
 }

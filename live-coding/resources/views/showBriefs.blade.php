@@ -28,6 +28,7 @@
                     <td><a href="/editBrief/{{$row->id}}"><button>edit</button></a></td>
                     <td><a href="/DeleteBrief/{{$row->id}}"><button>delete</button></a></td>
                     <td><a href="/ViewAddTask/{{$row->id}}"><button>Add Task</button></a></td>
+                    <td><a href="index/{{$row->id}}"><button>assign</button></a></td>
                 </tbody>
                 @endforeach
 

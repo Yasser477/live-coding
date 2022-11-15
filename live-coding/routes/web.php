@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\apprenticeBrief;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BriefController;
 use App\Http\Controllers\taskController;
@@ -30,10 +31,15 @@ Route::get('DeleteBrief/{id}',[BriefController::class, 'DeleteBrief']);
 Route::post('/updateBrief',[BriefController::class, 'updateBrief']);
 
 
-
-
-
 Route::get('ViewAddTask/{id}',[taskController::class, 'ViewAddTask']);
 Route::post('/addTask/{id}',[taskController::class, 'addTask']);
 Route::get('tasks',[taskController::class, 'ViewAllTasks']);
+
+
+Route::get('index/{id}',[apprenticeBrief::class, 'index']);
+Route::get('index/{id}',[apprenticeBrief::class, 'allStudent']);
+Route::post('/index/assignToStudent/{idstudent}/{idbrief}',[apprenticeBrief::class, 'assignToStudent']);
+
+
+
 
